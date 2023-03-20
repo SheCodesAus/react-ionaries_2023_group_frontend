@@ -1,12 +1,31 @@
-import { useState } from 'react'
+// import { useState } from 'react'
+import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
+import SignUpPage from './pages/SignUpPage'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const HeaderLayout = () => {
   return (
     <div>
-      
+      <Outlet />
     </div>
+  )
+};
+
+const router = createBrowserRouter([
+  {
+    element: <HeaderLayout />,
+    children: [
+      {
+        path: '/signup',
+        element: <SignUpPage />
+      },
+      
+    ]
+  }
+]);
+
+function App() {
+  return (
+    <RouterProvider router={router} />
   )
 }
 
