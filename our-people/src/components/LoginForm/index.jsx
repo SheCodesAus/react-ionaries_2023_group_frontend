@@ -3,42 +3,42 @@ import { useNavigate } from 'react-router-dom';
 import "./LoginForm.css";
 
 function LoginForm() {
-//     const [credentials, setCredentials] = useState({
-//         username: '',
-//         password: '',
-//     });
+    const [credentials, setCredentials] = useState({
+        username: '',
+        password: '',
+    });
 
-// const handleChange = (event) => {
-//     const { id, value } = event.target;
-//     setCredentials((prevCredentials) => ({
-//         ...prevCredentials,
-//         [id]: value
-//     }));
-// };
+const handleChange = (event) => {
+    const { id, value } = event.target;
+    setCredentials((prevCredentials) => ({
+        ...prevCredentials,
+        [id]: value
+    }));
+};
 
-// const navigate = useNavigate();
+const navigate = useNavigate();
 
-// const handleSubmit = (event) => {
-//     event.preventDefault();
+const handleSubmit = (event) => {
+    event.preventDefault();
 
-//     if (credentials.username && credentials.password) {
-//         postData().then((response) => {
-//             window.localStorage.setItem("token", response.token);
-//             navigate('/');
-//     });
-//     }
-// };
+    if (credentials.username && credentials.password) {
+        postData().then((response) => {
+            window.localStorage.setItem("token", response.token);
+            navigate('/');
+    });
+    }
+};
 
-// const postData = async () => {
-//     const response = await fetch(`${import.meta.env.VITE_API_URL}api-token-auth/`, {
-//         method: "post",
-//         headers: {
-//             "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify(credentials)
-//     })
-//     return response.json();
-// }
+const postData = async () => {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}api-token-auth/`, {
+        method: "post",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(credentials)
+    })
+    return response.json();
+}
 
     return(
         <form id="login-form">
@@ -60,6 +60,7 @@ function LoginForm() {
 
 export default LoginForm;
 
+// This is the form with 'handleSubmit' removed for testing.
 // return(
 //     <form id="login-form">
 //         <h1>Login Form Heading</h1>
