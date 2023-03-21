@@ -1,29 +1,37 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { useState } from 'react'
-import LoginForm from './components/LoginForm';
+import LoginPage from './pages/LoginPage';
+import SignUpPage from './pages/SignUpPage'
 
-// const router = createBrowserRouter([
-//     {
-//         element: <HeaderLayout />,
-//         children: [
-//             {
-//                 path: '/',
-//                 element: <HomePage />,
-//             },
-//             {
-//                 path: '/login/',
-//                 element: <LoginPage />
-//             }
-//         ]
-//     }
-// ])
+const HeaderLayout = () => {
+  return (
+    <div>
+      <Outlet />
+    </div>
+  )
+};
+
+const router = createBrowserRouter([
+  {
+    element: <HeaderLayout />,
+    children: [
+      {
+        path: '/signup',
+        element: <SignUpPage />
+      },
+	  {
+        path: '/login',
+        element: <LoginPage />
+      },
+      
+    ]
+  }
+]);
 
 function App() {
 	return(
-		<div>
-		<LoginForm/>
-		</div>
+		<RouterProvider router={router} />
     )
 }
 
