@@ -40,45 +40,24 @@ const postData = async () => {
     return response.json();
 }
 
-    return(
-        <form id="login-form">
-            <h1>Login Form Heading</h1>
-            <div className="login-form-section">
-                <label htmlFor="username">Username:</label>
-                <input type="text" id="username" placeholder="Enter username"></input>
-            </div>
-            <div className="login-form-section">
-                <label htmlFor="password">Password:</label>
-                <input type="password" id="password" placeholder="Enter password"></input>
-            </div>
+return(
+    <form id="login-form">
+        <h1>Login Form Heading</h1>
+        <div className="login-form-section">
+            <label htmlFor="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter username"
+            onChange={handleChange}></input>
+        </div>
+        <div className="login-form-section">
+            <label htmlFor="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter password"
+            onChange={handleChange}></input>
+        </div>
 
-            <button type="submit">Login</button>
+        <button type="submit" onClick={handleSubmit}>Login</button>
 
-        </form>
+    </form>
     )
 };
 
 export default LoginForm;
-
-// This is the form with 'handleSubmit' removed for testing.
-// return(
-//     <form id="login-form">
-//         <h1>Login Form Heading</h1>
-//         <div className="login-form-section">
-//             <label htmlFor="username">Username:</label>
-//             <input type="text" id="username" placeholder="Enter username"
-//             onChange={handleChange}></input>
-//         </div>
-//         <div className="login-form-section">
-//             <label htmlFor="password">Password:</label>
-//             <input type="password" id="password" placeholder="Enter password"
-//             onChange={handleChange}></input>
-//         </div>
-
-//         <button type="submit" onClick={handleSubmit}>Login</button>
-
-//     </form>
-// )
-// };
-
-// export default LoginForm;
