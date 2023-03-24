@@ -1,6 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './footer.css';
+import instaIcon from '../../assets/instagram.svg';
+import fbIcon from '../../assets/facebook.svg';
+import linkedinIcon from '../../assets/linkedin.svg';
+import twitterIcon from '../../assets/twitter.svg';
+import youtubeIcon from '../../assets/youtube.svg';
+
 
 function Footer() {
 
@@ -15,19 +21,25 @@ function Footer() {
                 </div>
                 <div className="socials-icons right-col">
                     <Link to={"#"}>
-                        <svg width="40" height="40">
-                            <use href="../../assets/social-media-icons.svg#icon-instagram"></use>
-                        </svg>
-                    </Link><Link to={"#"}>
+                        <img src={fbIcon} alt="" />
                     </Link>
-                    <Link to={"#"}><i className="fab fa-instagram"></i></Link>
-                    <Link to={"#"}><i className="fab fa-linkedin"></i></Link>
-                    <Link to={"#"}><i className="fab fa-youtube"></i></Link>
+                    <Link to={"#"}>
+                        <img src={instaIcon} alt="" />
+                    </Link>
+                    <Link to={"#"}>
+                        <img src={linkedinIcon} alt="" />
+                    </Link>
+                    <Link to={"#"}>
+                        <img src={twitterIcon} alt="" />
+                    </Link>
+                    <Link to={"#"}>
+                        <img src={youtubeIcon} alt="" />
+                    </Link>
                 </div>
             </div>
             <div className="bottom-row">
                 <div className="column">
-                <h4>About</h4>
+                <Link to={"#"}><h4>About</h4></Link>
                 <ul>
                     <li><Link to={"#"}>Loreum ipsum</Link></li>
                     <li><Link to={"#"}>Loreum ipsum</Link></li>
@@ -35,7 +47,7 @@ function Footer() {
                 </ul>
                 </div>
                 <div className="column">
-                <h4>Link 2</h4>
+                <Link to={"#"}><h4>Link 2</h4></Link>
                 <ul>
                     <li><Link to={"#"}>Loreum ipsum</Link></li>
                     <li><Link to={"#"}>Loreum ipsum</Link></li>
@@ -43,7 +55,7 @@ function Footer() {
                 </ul>
                 </div>
                 <div className="column">
-                <h4>Link 3</h4>
+                <Link to={"#"}><h4>Link 3</h4></Link>
                 <ul>
                     <li><Link to={"#"}>Loreum ipsum</Link></li>
                     <li><Link to={"#"}>Loreum ipsum</Link></li>
@@ -51,7 +63,7 @@ function Footer() {
                 </ul>
                 </div>
                 <div className="column">
-                <h4>Link 4</h4>
+                <Link to={"#"}><h4>Link 4</h4></Link>
                 <ul>
                     <li><Link to={"#"}>Loreum ipsum</Link></li>
                     <li><Link to={"#"}>Loreum ipsum</Link></li>
