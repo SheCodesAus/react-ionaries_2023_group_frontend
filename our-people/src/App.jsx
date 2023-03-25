@@ -5,11 +5,13 @@ import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage'
 import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer/Footer";
+import Nav from "./components/NavBar/navbar"
 
 
 const HeaderLayout = () => {
   return (
     <div>
+      <Nav />
       <Outlet />
       <Footer />
     </div>
