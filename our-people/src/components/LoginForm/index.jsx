@@ -54,7 +54,7 @@ return(
             onChange={handleChange}></input>
         </div>
 
-        <button type="submit" onClick={handleSubmit}>Login</button>
+        <button class="primary" type="submit" onClick={handleSubmit}>Login</button>
 
     </form>
     )

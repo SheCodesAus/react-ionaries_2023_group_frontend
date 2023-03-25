@@ -1,12 +1,23 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function SignUpForm() {
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+function CreateProfileForm() {
     const [ register, setRegister ] = useState({
-        firstName: "",
-        lastName: "",
-        email: "",
-        password: "",
+        displayName: "",
+        bio: "",
+        previousRole: "",
+        currentRole: "",
+        profileImage: "",
+        birthdate: "",
+        pronouns: "",
+        gender: "",
+        ethnicity: "",
+        linkedinUrl: "",
+        githubUrl: "",
+        challenge: "",
       });
 
     const handleChange = (event) => {
@@ -62,7 +73,7 @@ function SignUpForm() {
                 <input type="password"  id="password" onChange={handleChange} placeholder="Password"/>
             </div>
             
-            <button class="primary" onClick={handleSubmit} type="submit">Sign Up</button>
+            <button onClick={handleSubmit} type="submit">Sign Up</button>
         </div>
        
     )       
