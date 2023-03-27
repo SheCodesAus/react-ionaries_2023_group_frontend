@@ -5,7 +5,7 @@ import './ProfileCard.css'
 function ProfileCard(props) {
 return (
     <div className="profile-card">
-        <Link to={`/project/${profileData.id}`}>
+        <Link to={`/profile/${profileData.id}`}>
             <img src={profileData.image}></img>
             <h3>{profileData.first_name}{profileData.last_name}</h3>
             <h4>{profileData.pronouns}</h4>
