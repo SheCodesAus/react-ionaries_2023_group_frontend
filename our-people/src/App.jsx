@@ -2,7 +2,8 @@ import React from "react";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { useState } from 'react'
 import LoginPage from './pages/LoginPage';
-import SignUpPage from './pages/SignUpPage'
+import SignUpPage from './pages/SignUpPage';
+import ProfilePage from "./pages/ProfileId";
 
 const HeaderLayout = () => {
   return (
@@ -20,11 +21,14 @@ const router = createBrowserRouter([
         path: '/signup',
         element: <SignUpPage />
       },
-	  {
+	    {
         path: '/login',
         element: <LoginPage />
       },
-      
+      {
+        path: '/profile/:id',
+        element: <ProfilePage />
+      },
     ]
   }
 ]);
