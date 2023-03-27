@@ -9,7 +9,7 @@ function Nav() {
             <Link to="/signup">Sign up</Link>
             <Link to="/createprofile">Create Profile</Link>
             <Link to="/profileid">My Profile</Link>
-            <Link to="/allstories">View Mentors</Link>
+            <Link to="/allstories">All Stories</Link>
         </nav>
     )
 }
