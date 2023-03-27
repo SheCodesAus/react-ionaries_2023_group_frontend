@@ -1,13 +1,19 @@
 import React from "react";
-import ProjectCard  from "../components/ProfileCard";
+import ProfileCard from "../components/ProfileCard";
 
 
 function HomePage() {
     return (
-        <body>
-        <h1>This is the home page.</h1>
-        <div><ProjectCard/></div>
-        </body>
+        <div>
+            <h1>Bringing Technology Together</h1>
+            <div className = "profile-wrapper">
+                <div className = "container">
+                        <div><ProfileCard/></div>
+                        <div><ProfileCard/></div>
+                        <div><ProfileCard/></div>
+                </div>
+            </div>
+        </div>
 
     ) 
 }
