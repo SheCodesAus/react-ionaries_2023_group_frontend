@@ -2,14 +2,17 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import './ProfileCard.css'
 
-function ProfileCard() {
+function ProfileCard(props) {
 return (
-<div className="profile-card">
-    <h3>Name</h3>
-    <h5>Pronoun</h5>
-    <h4>New Job</h4>
-    <h4>Old Job</h4>
-</div>
+    <div className="profile-card">
+        <Link to={`/project/${profileData.id}`}>
+            <img src={profileData.image}></img>
+            <h3>{profileData.first_name}{profileData.last_name}</h3>
+            <h4>{profileData.pronouns}</h4>
+            <h4>{profileData.current_role}</h4>
+            <h5>{profileData.previous_role}</h5>
+        </Link>
+    </div>
 )
 }
 export default ProfileCard;
