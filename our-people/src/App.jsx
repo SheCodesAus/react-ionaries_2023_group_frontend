@@ -5,6 +5,7 @@ import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage'
 import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer/Footer";
+import AllStoriesPage from "./pages/AllStories";
 
 
 const HeaderLayout = () => {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <HomePage />
+      },
+      {
+        path: '/allstories',
+        element: <AllStoriesPage />
       },
     ]
   }
