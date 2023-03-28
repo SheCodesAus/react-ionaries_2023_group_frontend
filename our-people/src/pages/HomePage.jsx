@@ -55,6 +55,25 @@ function HomePage() {
             "allow_contact": true,
             "challenge": "This field is required.",
             "user_id": 1
+        },
+        {
+            "id": 2,
+            "display_name": "John",
+            "bio": "my story...",
+            "previous_role": "role1",
+            "current_role": "role2.",
+            "profile_image": "https://via.placeholder.com/300.jpg",
+            "birthdate": "2023-03-19",
+            "pronouns": "This field is required.",
+            "gender": "This field is required.",
+            "ethnicity": "This field is required.",
+            "linkedin_url": "https://www.linkedin.com/",
+            "github_url": "https://www.linkedin.com/",
+            "is_visible": true,
+            "is_public": true,
+            "allow_contact": true,
+            "challenge": "This field is required.",
+            "user_id": 1
         }
     ];
 
