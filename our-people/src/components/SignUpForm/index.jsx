@@ -62,7 +62,7 @@ function SignUpForm() {
                 <input type="password"  id="password" onChange={handleChange} placeholder="Password"/>
             </div>
             
-            <button onClick={handleSubmit} type="submit">Sign Up</button>
+            <button class="primary" onClick={handleSubmit} type="submit">Sign Up</button>
         </div>
        
     )       
