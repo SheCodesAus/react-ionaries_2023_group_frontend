@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ProjectCard from '../components/ProjectCard'
+import { useNavigate } from 'react-router-dom';
 
 function ProfilePage() {
     const [ profileData, setProfileData] = useState({profiles: []})
@@ -10,8 +11,8 @@ function ProfilePage() {
         .then((profileResults) => {
             return profileResults.json();
         })
-        .then((profileData) => {
-            setProfileData(profileData)
+        .then((profileDataJson) => {
+            setProfileData(profileDataJson)
         })
     }, [])
 
