@@ -72,8 +72,41 @@ return(
             <input type="text" id="currentRole" placeholder="What is your current role?"
             onChange={handleChange}></input>
         </div>
+        <div className="profile-form-section">
+            <label htmlFor="challenge">Challenge:</label>
+            <input type="text" id="challenge" placeholder="Challenge"
+            onChange={handleChange}></input>
+        </div>
+        <div className="profile-form-section">
+            <label htmlFor="birthdate">Birthdate:</label>
+            <input type="date" id="birthdate" placeholder="Please include your birthdate YYYY/MM/DD"
+            onChange={handleChange}></input>
+        </div>
+        <div className="profile-form-section">
+            <label htmlFor="pronouns">Pronouns:</label>
+            <select>
+                <option value="She/Her">She/Her</option>
+                <option value="He/Him">He/Him</option>
+                <option value="They/Them">They/Them</option>
+                <option value="She/They">She/They</option>
+                <option value="He/They">He/They</option>
+            </select>
+            <input type="text" id="pronouns" placeholder="Pronouns"
+            onChange={handleChange}></input>
+        </div>
+        <div className="profile-form-section">
+            <label htmlFor="linkedinUrl">LinkedIn Url:</label>
+            <input type="text" id="linkedinUrl" placeholder="LinkedIn Url"
+            onChange={handleChange}></input>
+        </div>
+        <div className="profile-form-section">
+            <label htmlFor="githubUrl">GitHub Url:</label>
+            <input type="text" id="githubUrl" placeholder="Github Url"
+            onChange={handleChange}></input>
+        </div>
 
-        <button class="primary" type="submit" onClick={handleSubmit}>Login</button>
+
+        <button class="primary" type="submit" onClick={handleSubmit}>Submit</button>
 
     </form>
     )
