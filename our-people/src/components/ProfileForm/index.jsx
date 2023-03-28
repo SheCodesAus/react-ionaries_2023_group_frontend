@@ -91,8 +91,6 @@ return(
                 <option value="She/They">She/They</option>
                 <option value="He/They">He/They</option>
             </select>
-            <input type="text" id="pronouns" placeholder="Pronouns"
-            onChange={handleChange}></input>
         </div>
         <div className="profile-form-section">
             <label htmlFor="linkedinUrl">LinkedIn Url:</label>
