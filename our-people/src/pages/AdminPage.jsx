@@ -28,14 +28,28 @@ function AdminPage() {
 
     return (
         <div>
-            <h3>Users to be approved:</h3>
-            {/* <p>{profileLinks.bio[1]}</p>             */}
-            <div>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>LinkedIn url</th>
+                    <th>GitHub url</th>
+                </tr>
+            {/* <h3>Users to be approved:</h3> */}
+            {/* <p>{profileLinks.bio}</p>             */}
                 {approvalList.map((approvalList, key) => {
-                    return <li key={key} approvalList={approvalList}>{approvalList.first_name} {approvalList.last_name} 
-                    <button>Approve</button></li>
+                    return <tr key={key} approvalList={approvalList}>
+                        <td>{approvalList.first_name} {approvalList.last_name}</td>
+                        {/* <td>{profileLinks.linkedin_url}</td>
+                        <td>{profileLinks.github_url}</td>  */}
+                        </tr>
+                    })}
+            </table>
+                {approvalList.map((approvalList, key) => {
+                    return <li key={key} approvalList={approvalList}>
+
+                    </li>
                 })}
-            </div>
+            <button>Approve</button>
         </div>
         )
 };
