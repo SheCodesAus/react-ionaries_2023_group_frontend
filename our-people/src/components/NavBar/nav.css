@@ -1,6 +1,53 @@
-nav {
+header {
     position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1440px;
+    padding: 10px 10px 10px 80px;
+    border: 1px solid #000;
+}
+header img {
+    width: 40px;
+    height: 40px;
+}
+.primary-btn {
+    border: 2px solid #9F8CFA;
+    color: #000;
+    background-color: #523EAD;
+}
+.secondary-btn {
+    border: 2px solid #523EAD;
+    color: #fff;
+    background-color: #9F8CFA;
+}
+nav a {
+    display: inline-block;
+    width: 140px;
+    border-radius: 40px;
+    border: 2px solid #000;
+    color: #000;
+    cursor: pointer;
+    padding: 14px 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    margin-right: 7px;
+}
+nav{
+    display: flex;
+}
+.user-icon{
+    border-radius: 50%;
+    background-color: #F9EC8C;
+    width: 50px;
+    text-align: center;
+    padding-top: 13px;
+    text-transform: capitalize;
+    border: 1px solid #000;
+    margin-right: 20px;
 }

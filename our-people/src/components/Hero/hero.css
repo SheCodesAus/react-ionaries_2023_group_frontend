@@ -1,0 +1,47 @@
+.hero {
+    max-width: 1440px;
+}
+.hero-title{
+    background-color: #F9EC8C;
+    padding-top: 260px;
+    padding-left: 184px;
+    padding-bottom: 115px;
+    padding-right: 136px;
+}
+.hero-title h1 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 49px;
+    margin:0 0 23px 0;
+}
+.hero-title p {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0;
+}
+.hero-values {
+    display: flex;
+    justify-content: space-between;
+
+}
+.hero-values p{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 49px;
+    border: 1px solid #000;
+    margin: 0;
+    width: 480px;
+    text-align: center;
+    padding: 64px 0;
+}
+.hero-slogan{
+    border: 1px solid #000;
+    text-align: center;
+
+}
+.hero-slogan h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 49px;
+    margin: 45px 0 16px 0;
+}

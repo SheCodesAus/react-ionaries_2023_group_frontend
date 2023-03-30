@@ -23,6 +23,7 @@ const handleSubmit = (event) => {
     if (credentials.username && credentials.password) {
         postData().then((response) => {
             window.localStorage.setItem("token", response.token);
+            window.localStorage.setItem("username", credentials.username);
             navigate('/');
     });
     }
@@ -53,7 +54,7 @@ return(
             onChange={handleChange}></input>
         </div>
 
-        <button class="primary" type="submit" onClick={handleSubmit}>Login</button>
+        <button className="primary" type="submit" onClick={handleSubmit}>Login</button>
 
     </form>
     )

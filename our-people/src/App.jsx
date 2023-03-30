@@ -7,8 +7,7 @@ import SignUpPage from './pages/SignUpPage';
 import MyProfilePage from './pages/MyProfilePage';
 import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer/Footer";
-import Nav from "./components/NavBar/navbar"
-import AdminPage from "./pages/AdminPage";
+import Nav from "./components/NavBar"
 
 
 const HeaderLayout = () => {
