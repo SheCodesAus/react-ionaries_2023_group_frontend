@@ -45,3 +45,13 @@ nav a {
 nav{
     display: flex;
 }
+.user-icon{
+    border-radius: 50%;
+    background-color: #F9EC8C;
+    width: 50px;
+    text-align: center;
+    padding-top: 13px;
+    text-transform: capitalize;
+    border: 1px solid #000;
+    margin-right: 20px;
+}

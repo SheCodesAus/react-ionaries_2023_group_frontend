@@ -13,11 +13,12 @@ function Nav() {
         localStorage.clear();
         navigate('/');
     }
+
     return (
         <header>
             <Link to="/"><img src={logo} alt="logo" /></Link>
             <nav>
-                {isLogIn && <p>Hi, {username}</p>}
+                {isLogIn && <Link className='user-icon' to="/profileid">{username.slice(0,1)}</Link>}
                 {isLogIn && <Link to="/" onClick={onLogOut}>Log out</Link>}
                 {isLogIn && <Link to="/createprofile">Create Profile</Link>}
                 {isLogIn && <Link to="/profileid">My Profile</Link>}
