@@ -19,12 +19,11 @@ function Nav() {
             <Link to="/"><img src={logo} alt="logo" /></Link>
             <nav>
                 {isLogIn && <Link className='user-icon' to="/profileid">{username.slice(0,1)}</Link>}
-                {isLogIn && <Link to="/" onClick={onLogOut}>Log out</Link>}
                 {isLogIn && <Link to="/createprofile">Create Profile</Link>}
-                {isLogIn && <Link to="/profileid">My Profile</Link>}
                 {isLogIn && <Link to="/allstories">All Stories</Link>}
+                {isLogIn && <Link className='secondary-btn' to="/" onClick={onLogOut}>Log out</Link>}
                 {!isLogIn && <Link to="/login">Log in</Link>}
-                {!isLogIn && <Link className='signup-btn' to="/signup">Sign up </Link>}
+                {!isLogIn && <Link className='secondary-btn' to="/signup">Sign up </Link>}
             </nav>
         </header>
     )

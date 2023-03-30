@@ -14,19 +14,15 @@ header img {
     width: 40px;
     height: 40px;
 }
-.signup-btn {
-    display: inline-block;
-    width: 140px;
-    border-radius: 40px;
+.primary-btn {
+    border: 2px solid #9F8CFA;
+    color: #000;
+    background-color: #523EAD;
+}
+.secondary-btn {
     border: 2px solid #523EAD;
     color: #fff;
     background-color: #9F8CFA;
-    cursor: pointer;
-    padding: 14px 0;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
 }
 nav a {
     display: inline-block;
