@@ -4,11 +4,10 @@ import logo from '../../assets/logo.png';
 import './nav.css'
 
 function Nav() {
-    // const isLogIn = window.localStorage.getItem("token") !== null;
-    // const username = window.localStorage.getItem("username");
+    const isLogIn = window.localStorage.getItem("token") !== null;
+    const username = window.localStorage.getItem("username");
     const navigate = useNavigate();
-    const isLogIn = true;
-    const username = "yuliia";
+
 
     const onLogOut = () => {
         localStorage.clear();
