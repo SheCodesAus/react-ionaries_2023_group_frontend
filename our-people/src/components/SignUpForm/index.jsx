@@ -24,7 +24,7 @@ function SignUpForm() {
         if (register.firstName && register.lastName && register.email && register.password) {
             postData().then((response) => {
                 window.localStorage.setItem("token", response.token)
-                // navigate('/profiles/') This will be used once the 'create profile' page is ready.
+                navigate('/createprofile/')
             })
         }
     };
