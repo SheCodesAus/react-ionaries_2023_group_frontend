@@ -5,7 +5,7 @@ function AllStoriesPage() {
     const [profileList, setProfileList] = useState([]);
     
     useEffect(() => {
-        fetch(`${import.meta.env.VITE_API_URL}profiles/${id}`)
+        fetch(`${import.meta.env.VITE_API_URL}profile/`)
         .then((results) => {
             return results.json();
         })
