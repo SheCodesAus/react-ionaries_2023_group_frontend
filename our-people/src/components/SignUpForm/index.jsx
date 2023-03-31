@@ -7,7 +7,7 @@ function SignUpForm() {
         lastName: "",
         email: "",
         password: "",
-      });
+    });
 
     const handleChange = (event) => {
         const { id, value } = event.target;
@@ -33,7 +33,7 @@ function SignUpForm() {
         const response = await fetch(`${import.meta.env.VITE_API_URL}users/`, {
             method: "post",
             headers: {
-              "Content-Type": "application/json",
+            "Content-Type": "application/json",
             },
             body: JSON.stringify(register),
         })
@@ -63,8 +63,7 @@ function SignUpForm() {
             </div>
             
             <button class="primary" onClick={handleSubmit} type="submit">Sign Up</button>
-        </div>
-       
+        </div>       
     )       
 
 }
