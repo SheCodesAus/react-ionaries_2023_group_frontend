@@ -8,7 +8,7 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
+  min-height: 100vh;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -21,7 +21,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.main{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.main-center{
+  flex: 1;
+}
 a {
   font-weight: 500;
   color: #646cff;
@@ -52,8 +59,8 @@ body {
   /* min-width: 320px; */
   min-height: 100vh;
 }
-.main{
-  flex: 1;
+.container-for-profiles-cards{
+  max-width: 1440px;
 }
 h1 {
   font-size: 40px;

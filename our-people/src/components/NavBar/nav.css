@@ -6,9 +6,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1440px;
     padding: 10px 10px 10px 80px;
     border: 1px solid #000;
+    background-color: #fff;
 }
 header img {
     width: 40px;

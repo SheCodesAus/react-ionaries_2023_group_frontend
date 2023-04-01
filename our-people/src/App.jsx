@@ -13,9 +13,11 @@ import Nav from "./components/NavBar";
 
 const HeaderLayout = () => {
   return (
-    <div>
+    <div className="main">
       <Nav />
-      <Outlet />
+      <div className="main-center">
+        <Outlet />
+      </div>
       <Footer />
     </div>
   )
@@ -55,9 +57,9 @@ const router = createBrowserRouter([
 
 function App() {
 	return(
-		<RouterProvider router={router} />
+       <RouterProvider router={router} />
     )
-  
+
 }
 
 export default App
