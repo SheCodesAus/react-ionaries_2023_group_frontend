@@ -2,25 +2,29 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function ProfileForm() {
-    const [credentials, setCredentials] = useState({
-        displayName: "",
+    const [profile, setProfile] = useState({
+        allow_contact: true,
+        display_name: "",
         bio: "",
-        previousRole: "",
-        currentRole: "",
-        profileImage: "",
+        previous_role: "",
+        current_role: "",
+        profile_image: "",
         birthdate: "",
         pronouns: "",
         gender: "",
         ethnicity: "",
-        linkedinUrl: "",
-        githubUrl: "",
+        linkedin_url: "",
+        github_url: "",
         challenge: "",
+        is_public: true,
+        is_visible: true
     });
 
 const handleChange = (event) => {
     const { id, value } = event.target;
-    setCredentials((prevCredentials) => ({
-        ...prevCredentials,
+    console.log(id, value)
+    setProfile((prevProfile) => ({
+        ...prevProfile,
         [id]: value
     }));
 };
@@ -30,21 +34,27 @@ const navigate = useNavigate();
 const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (credentials.displayName && credentials.bio) {
+    if (profile.display_name && profile.bio) {
         postData().then((response) => {
-            window.localStorage.setItem("token", response.token);
-            navigate('/');
+            if (response.id) { 
+                navigate(`/profile/${response.id}`);
+            } else { 
+                alert("Sorry go back and fill in the form again");
+            };
     });
     }
 };
 
 const postData = async () => {
-    const response = await fetch(`${import.meta.env.VITE_API_URL}api-token-auth/`, {
+    console.log (profile);
+    const token = window.localStorage.getItem("token");
+    const response = await fetch(`${import.meta.env.VITE_API_URL}profile/`, {
         method: "post",
         headers: {
             "Content-Type": "application/json",
+            "authorization": `token ${token}`
         },
-        body: JSON.stringify(credentials)
+        body: JSON.stringify(profile)
     })
     return response.json();
 }
@@ -53,8 +63,13 @@ return(
     <form className='form' id="profile-form">
         <h1>Profile Form Heading</h1>
         <div className="profile-form-section">
-            <label htmlFor="displayName">Display Name:</label>
-            <input type="text" id="displayName" placeholder="Enter Display Name"
+            <label htmlFor="profile_image">Profile_image:</label>
+            <input type="url" id="profile_image" placeholder="Place a profile image url"
+            onChange={handleChange}></input>
+        </div>
+        <div className="profile-form-section">
+            <label htmlFor="display_name">Display Name:</label>
+            <input type="text" id="display_name" placeholder="Enter Display Name"
             onChange={handleChange}></input>
         </div>
         <div className="profile-form-section">
@@ -63,13 +78,13 @@ return(
             onChange={handleChange}></input>
         </div>
         <div className="profile-form-section">
-            <label htmlFor="previousRole">Previous Role:</label>
-            <input type="text" id="previousRole" placeholder="What role have you transitioned from?"
+            <label htmlFor="previous_role">Previous Role:</label>
+            <input type="text" id="previous_role" placeholder="What role have you transitioned from?"
             onChange={handleChange}></input>
         </div>
         <div className="profile-form-section">
-            <label htmlFor="currentRole">Current Role:</label>
-            <input type="text" id="currentRole" placeholder="What is your current role?"
+            <label htmlFor="current_role">Current Role:</label>
+            <input type="text" id="current_role" placeholder="What is your current role?"
             onChange={handleChange}></input>
         </div>
         <div className="profile-form-section">
@@ -84,7 +99,8 @@ return(
         </div>
         <div className="profile-form-section">
             <label htmlFor="pronouns">Pronouns:</label>
-            <select>
+            <select id="pronouns" onChange={handleChange}>
+                <option value="" disabled>Select one...</option>
                 <option value="She/Her">She/Her</option>
                 <option value="He/Him">He/Him</option>
                 <option value="They/Them">They/Them</option>
@@ -93,18 +109,31 @@ return(
             </select>
         </div>
         <div className="profile-form-section">
-            <label htmlFor="linkedinUrl">LinkedIn Url:</label>
-            <input type="text" id="linkedinUrl" placeholder="LinkedIn Url"
+            <label htmlFor="ethnicity">Ethnicity:</label>
+            <input type="text" id="ethnicity" placeholder="What is your ethnicity?"
             onChange={handleChange}></input>
         </div>
         <div className="profile-form-section">
-            <label htmlFor="githubUrl">GitHub Url:</label>
-            <input type="text" id="githubUrl" placeholder="Github Url"
+            <label htmlFor="gender">Gender:</label>
+            <select id="gender" onChange={handleChange}>
+            <option value="" disabled>Select one...</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+            </select>
+        </div>
+        <div className="profile-form-section">
+            <label htmlFor="linkedin_url">LinkedIn Url:</label>
+            <input type="url" id="linkedin_url" placeholder="LinkedIn Url"
+            onChange={handleChange}></input>
+        </div>
+        <div className="profile-form-section">
+            <label htmlFor="github_url">GitHub Url:</label>
+            <input type="url" id="github_url" placeholder="Github Url"
             onChange={handleChange}></input>
         </div>
 
 
-        <button class="primary" type="submit" onClick={handleSubmit}>Submit</button>
+        <button className="primary" type="submit" onClick={handleSubmit}>Submit</button>
 
     </form>
     )
