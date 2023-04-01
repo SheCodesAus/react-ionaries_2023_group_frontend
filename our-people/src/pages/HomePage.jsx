@@ -1,6 +1,6 @@
 import ProfileCard from "../components/ProfileCard";
 import { useState, useEffect } from 'react';
-
+import Hero from '../components/Hero';
 
 
 
