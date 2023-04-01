@@ -4,7 +4,7 @@ footer {
     left: 0;
     right: 0;
     max-width: 1440px;
-    padding: 0 85px;
+    padding: 16px 85px;
     overflow: hidden;
     border-top: 1px solid #000;
 
@@ -20,6 +20,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 29px;
 }
 
 .left-col {

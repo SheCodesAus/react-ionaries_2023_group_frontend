@@ -23,6 +23,7 @@ function HomePage() {
 
         return (
             <div>
+                <Hero />
                 <h1>Bringing Technology Together</h1>
                     <div className = "profile-wrapper">
                         <div className = "container">
