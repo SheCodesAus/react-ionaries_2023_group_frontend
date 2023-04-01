@@ -8,7 +8,7 @@ import MyProfilePage from './pages/MyProfilePage';
 import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer/Footer";
 import AllStoriesPage from "./pages/AllStories";
-import Nav from "./components/NavBar/navbar"
+import Nav from "./components/NavBar";
 
 
 const HeaderLayout = () => {

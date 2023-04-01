@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import ProjectCard from '../components/ProjectCard'
 import { useNavigate } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 
 function ProfilePage() {
     const [ profileData, setProfileData] = useState({profiles: []})
     const { id } = useParams();
 
     useEffect(() => {
-        fetch(`${import.meta.env.VITE_API_URL}profiles/${id}`)
+        fetch(`${import.meta.env.VITE_API_URL}profile/${id}`)
         .then((profileResults) => {
             return profileResults.json();
         })
