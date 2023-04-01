@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 function SignUpPage() {
     const [ register, setRegister ] = useState({
+        username: "",
         firstName: "",
         lastName: "",
         email: "",
@@ -24,8 +25,7 @@ function SignUpPage() {
         event.preventDefault();
         if (register.firstName && register.lastName && register.email && register.password) {
             postData().then((response) => {
-                window.localStorage.setItem("token", response.token)
-                // navigate('/profiles/') This will be used once the 'create profile' page is ready.
+                navigate('/login/')
             })
         }
     };
@@ -44,6 +44,11 @@ function SignUpPage() {
     return (
         <div className="form">
             <div className="username">
+                <label htmlFor="firstName">Username:</label>
+                <input type="text" onChange={handleChange} id="userName" placeholder="Username"/>
+            </div>
+
+            <div className="firstname">
                 <label htmlFor="firstName">First Name:</label>
                 <input type="text" onChange={handleChange} id="firstName" placeholder="First Name"/>
             </div>

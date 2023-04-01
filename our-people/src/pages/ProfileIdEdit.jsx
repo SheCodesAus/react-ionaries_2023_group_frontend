@@ -1,26 +1,33 @@
 import { useState } from 'react';
+import { useLocation } from "react-router-dom";
 
-function ProfileEdit(props) {
-    const { editProfile } = props; //destructuring
-    const [profile, setProfile] = useState({
-        profile_image : props.profile_image,
-        display_name: props.display_name,
-        pronouns: props.pronouns,
-        current_role: props.current_role,
-        previous_role: props.previous_role,
-        bio: props.bio,
-        challenge: props.challenge,
-        github_url: props.github_url,
-        linkedin_url: props.linkedin_url,
-    })
-    const { profileId } = props.id;
-    const [project, setProject] = useState({
-        id: props.project.id,
-        title: props.project.title,
-        image: props.project.image,
-        description: props.project.description,
-        url: props.project.url,
-    })
+function ProfileEdit() {
+    const token = localStorage.getItem('token')
+    const location = useLocation();
+    const [profile, setProfile] = useState({...location})
+    
+    // const [profile, setProfile] = useState({
+    //     profile_image : props.profile_image,
+    //     display_name: props.display_name,
+    //     pronouns: props.pronouns,
+    //     current_role: props.current_role,
+    //     previous_role: props.previous_role,
+    //     bio: props.bio,
+    //     challenge: props.challenge,
+    //     github_url: props.github_url,
+    //     linkedin_url: props.linkedin_url,
+    // })
+    const { profileId } = location.id;
+
+    const [project, setProject] = useState({...location.project.id})
+
+    // const [project, setProject] = useState({
+    //     id: props.project.id,
+    //     title: props.project.title,
+    //     image: props.project.image,
+    //     description: props.project.description,
+    //     url: props.project.url,
+    // })
 
 
     const handleChange = (event) => {
@@ -43,8 +50,9 @@ function ProfileEdit(props) {
             method: "put",
             headers: {
                 "Content-Type": "application/json",
+                'Authorization': `Bearer ${token}`,
             },
-            body: JSON.stringify(credentials)
+            body: JSON.stringify(profile)
         })
         return response.json();
     }
@@ -63,4 +71,5 @@ return (
     </form>
 )
 
+}
 export default ProfileEdit;

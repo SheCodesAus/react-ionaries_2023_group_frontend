@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ProjectCard from '../components/ProjectCard'
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import ProfileEdit from '../pages/ProfileIdEdit';
 
 function ProfilePage() {
@@ -30,6 +30,9 @@ function ProfilePage() {
         });
     }, []);
 
+
+    // .then (data.filter(project => project.profile_id == id))
+    
     return ( 
         <div>
 
@@ -52,7 +55,7 @@ function ProfilePage() {
             </div>
             
             <div>
-            <Link to={`/profile/${profileData.id}/edit`} state={{ props: profileData }}>
+            <Link to={`/profile/${profileData.id}/edit`}>
                 <button class="primary" type="button">Edit</button>
             </Link>
             </div>

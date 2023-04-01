@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 function SignUpForm() {
     const [ register, setRegister ] = useState({
+        username: "",
         firstName: "",
         lastName: "",
         email: "",
@@ -43,6 +44,11 @@ function SignUpForm() {
     return (
         <div className="form">
             <div className="username">
+                <label htmlFor="userName">Username:</label>
+                <input type="text" onChange={handleChange} id="userName" placeholder="Username"/>
+            </div>
+
+            <div className="firstname">
                 <label htmlFor="firstName">First Name:</label>
                 <input type="text" onChange={handleChange} id="firstName" placeholder="First Name"/>
             </div>
