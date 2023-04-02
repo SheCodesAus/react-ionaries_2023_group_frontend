@@ -5,8 +5,8 @@ import { useNavigate } from 'react-router-dom';
 function SignUpPage() {
     const [ register, setRegister ] = useState({
         username: "",
-        firstName: "",
-        lastName: "",
+        first_name: "",
+        last_name: "",
         email: "",
         password: "",
       });
@@ -23,7 +23,7 @@ function SignUpPage() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (register.first_name && register.last_name && register.email && register.password) {
+        if (register.username && register.first_name && register.last_name && register.email && register.password) {
             postData().then((response) => {
                 window.localStorage.setItem("token", response.token)
                 navigate('/createprofile/')
@@ -47,7 +47,7 @@ function SignUpPage() {
             <h1>Sign up to share your success story</h1>
             <div className="username">
                 <label htmlFor="userName">User Name:</label>
-                <input type="text" onChange={handleChange} id="user_name" placeholder="User Name"/>
+                <input type="text" onChange={handleChange} id="username" placeholder="User Name"/>
             </div>
             <div className="firstName">
                 <label htmlFor="firstName">First Name:</label>
