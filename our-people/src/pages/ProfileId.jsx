@@ -47,17 +47,19 @@ function ProfilePage() {
                 <a>{profileData.github_url}</a>
                 <a>{profileData.linkedin_url}</a>
             </div>
-
-            <div>
-            {projectList.map((projectData, key) => {
-                return <ProjectCard projectData={projectData}/>
-            })}
-            </div>
             
             <div>
-            <Link to={`/profile/${profileData.id}/edit`}>
+                {projectList.filter(project => project.profile_id == id).map((projectData, key) => {
+                    return <ProjectCard projectData={projectData}/>
+                    })}
+
+            </div>
+                
+
+            <div>
+                <Link to={`/profile/${profileData.id}/edit`}>
                 <button class="primary" type="button">Edit</button>
-            </Link>
+                </Link>
             </div>
 
         </div>
