@@ -29,36 +29,6 @@
 .main-center{
   flex: 1;
 }
-
-.form > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  }
-
-  form {
-    margin: 0px; 
-    padding: 100px;
-  }
-
-  #bio {
-    width: 400px;
-    height: 200px;
-  }
-  
-  #challenge {
-    width: 400px;
-    height: 200px;
-  }
-
-  #pronouns {
-    width: 400px;
-  }
-
-  #gender {
-    width: 400px;
-  }
-  
 a {
   font-weight: 500;
   color: #646cff;
@@ -68,6 +38,11 @@ a:hover {
   color: #535bf2;
 }
 
+.form > div {
+display: flex;
+flex-direction: column;
+}
+
 input {
     width: 400px;
     padding: 12px 20px;
@@ -75,8 +50,15 @@ input {
     box-sizing: border-box;
   }
 
+.allstories {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 body {
-  padding-top: 150px;
+  padding-top: 74px;
   /* margin: 0; */
   /* padding:0 128px; */
   /* display: flex; */

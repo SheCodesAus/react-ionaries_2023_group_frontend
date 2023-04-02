@@ -15,7 +15,7 @@ function AllStoriesPage() {
     }, []);
     
         return (
-            <div>
+            <div className="allstories">
                 {profileList.map((profileData, key)=> {
                     return <ProfileCard key={key} profileData={profileData} />;
                 }
