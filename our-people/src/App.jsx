@@ -4,7 +4,7 @@ import { useState } from 'react'
 import LoginPage from './pages/LoginPage';
 import ProfilePage from "./pages/ProfilePage";
 import SignUpPage from './pages/SignUpPage';
-import MyProfilePage from './pages/CreateProfilePage';
+import CreateProfilePage from './pages/CreateProfilePage';
 import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer/Footer";
 import AllStoriesPage from "./pages/AllStories";
@@ -59,7 +59,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/create-profile',
-        element: <MyProfilePage />
+        element: <CreateProfilePage />
       },
     ]
   }

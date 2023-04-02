@@ -18,7 +18,7 @@ function ProjectEdit() {
     }, []);
 
     const handleChange = (event) => {
-        setProfile({ ...profile, [event.target.name]: event.target.value });
+        setProjectData({ ...projectData, [event.target.name]: event.target.value });
     };
 
     const handleSubmit = (event) => {
