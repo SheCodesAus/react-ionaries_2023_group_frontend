@@ -60,6 +60,35 @@ h1 {
   line-height: 1.1;
 }
 
+/* home-page css */
+
+.profile-wrapper {
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  max-width: 1440px;
+}
+
+.profile-title {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+  width: 100%;
+}
+
+.profile-container {
+  width: 100%;
+  display: flex;
+  align-content: row;
+}
+
+
+
+/* end of home page css */
+
 button.primary{
   width: 140px;
   height: 48px;
