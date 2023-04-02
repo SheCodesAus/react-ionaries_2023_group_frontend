@@ -16,12 +16,10 @@ function AllStoriesPage() {
     
         return (
             <div>
-                <div>
-                    {profileList.map((profileData, key)=> {
-                        return <ProfileCard key={key} profileData={profileData} />;
-                    }
-                    )}
-                </div>
+                {profileList.map((profileData, key)=> {
+                    return <ProfileCard key={key} profileData={profileData} />;
+                }
+                )}
             </div>
         )
     }
