@@ -58,6 +58,13 @@
   #gender {
     width: 400px;
   }
+
+  .allstories {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
   
 a {
   font-weight: 500;
