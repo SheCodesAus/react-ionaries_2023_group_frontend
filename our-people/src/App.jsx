@@ -7,14 +7,17 @@ import SignUpPage from './pages/SignUpPage';
 import MyProfilePage from './pages/MyProfilePage';
 import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer/Footer";
-import Nav from "./components/NavBar"
+import AllStoriesPage from "./pages/AllStories";
+import Nav from "./components/NavBar";
 
 
 const HeaderLayout = () => {
   return (
-    <div>
+    <div className="main">
       <Nav />
-      <Outlet />
+      <div className="main-center">
+        <Outlet />
+      </div>
       <Footer />
     </div>
   )
@@ -41,6 +44,10 @@ const router = createBrowserRouter([
         element: <HomePage />
       },
       {
+        path: '/allstories',
+        element: <AllStoriesPage />
+      },
+      {
         path: '/createprofile',
         element: <MyProfilePage />
       },
@@ -50,9 +57,9 @@ const router = createBrowserRouter([
 
 function App() {
 	return(
-		<RouterProvider router={router} />
+       <RouterProvider router={router} />
     )
-  
+
 }
 
 export default App

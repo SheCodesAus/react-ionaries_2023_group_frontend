@@ -29,9 +29,6 @@ function ProfilePage() {
             setProjectList(data)
         });
     }, []);
-
-
-    // .then (data.filter(project => project.profile_id == id))
     
     return ( 
         <div>
