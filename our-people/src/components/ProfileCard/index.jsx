@@ -6,6 +6,7 @@ function ProfileCard(props) {
     const {profileData} = props;
 return (
     <div className="profile-card">
+        <Link to={`/profile/${profileData.id}`}>
             <div className="gradient">
                     <div className="detail-card-container">
                         <h3>{profileData.display_name}</h3>
@@ -16,8 +17,9 @@ return (
                     <div className="display-image-container">
                         <img id="display-image" src={profileData.profile_image}></img>
                     </div>
-            </div>        
-        <Link to={`/profile/${profileData.id}`}></Link>
+        
+            </div>    
+        </Link>    
     </div>
 )
 }
