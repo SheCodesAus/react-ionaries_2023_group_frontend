@@ -179,12 +179,12 @@ button:focus-visible {
 }
 
 
+/* Profile-ID-Page css */
+
 .div1{
   width: 50%;
   float:right;
   margin-top: 80px;
- 
- 
  }
  
  .div1 img{
@@ -192,7 +192,6 @@ button:focus-visible {
    height: 350px;
    border-radius: 30px;
    margin-left: 60px;
- 
  }
  
  .div2{
@@ -201,7 +200,6 @@ button:focus-visible {
    margin-top: 80px;
    margin-left: 90px;
    border-radius: 10px;
- 
   }
 
   .div2 h2{
@@ -216,31 +214,12 @@ button:focus-visible {
     padding-bottom: 15px;
   }
 
-
-
-.container-projects {
-   
+  .project-container {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-top: 30px;
-    /* border: 1px solid black; */
-    
-}
-
-.container-projects-details{
-  padding: 20px;
-  width: 100%;
-  margin-top: 30px;
-  margin-left: 10px;
-  display: flex;
-  flex-direction:column;
-  /* flex-wrap: wrap; */
-  gap: 20px;
-  
-}
-
-
+    align-content: row;
+  }
+ 
 
 
 
