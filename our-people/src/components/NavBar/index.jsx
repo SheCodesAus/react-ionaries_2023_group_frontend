@@ -5,7 +5,7 @@ import './nav.css'
 
 function Nav() {
     const isLogIn = window.localStorage.getItem("token") !== null;
-    const username = window.localStorage.getItem("username");
+    const username = window.localStorage.getItem("username") || "";
     const navigate = useNavigate();
 
 

@@ -8,7 +8,7 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
+  min-height: 100vh;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -21,7 +21,51 @@
   padding: 0;
   box-sizing: border-box;
 }
+.main{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.main-center{
+  flex: 1;
+}
 
+.form > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  }
+
+  form {
+    margin: 0px; 
+    padding: 100px;
+  }
+
+  #bio {
+    width: 400px;
+    height: 200px;
+  }
+  
+  #challenge {
+    width: 400px;
+    height: 200px;
+  }
+
+  #pronouns {
+    width: 400px;
+  }
+
+  #gender {
+    width: 400px;
+  }
+
+  .allstories {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
 a {
   font-weight: 500;
   color: #646cff;
@@ -29,11 +73,6 @@ a {
 }
 a:hover {
   color: #535bf2;
-}
-
-.form > div {
-display: flex;
-flex-direction: column;
 }
 
 input {
@@ -44,7 +83,7 @@ input {
   }
 
 body {
-  padding-top: 74px;
+  padding-top: 150px;
   /* margin: 0; */
   /* padding:0 128px; */
   /* display: flex; */
@@ -52,13 +91,42 @@ body {
   /* min-width: 320px; */
   min-height: 100vh;
 }
-.main{
-  flex: 1;
+.container-for-profiles-cards{
+  max-width: 1440px;
 }
 h1 {
   font-size: 40px;
   line-height: 1.1;
 }
+
+/* home-page css */
+
+.profile-wrapper {
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  max-width: 1440px;
+}
+
+.profile-title {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+  width: 100%;
+}
+
+.profile-container {
+  width: 100%;
+  display: flex;
+  align-content: row;
+}
+
+
+
+/* end of home page css */
 
 button.primary{
   width: 140px;

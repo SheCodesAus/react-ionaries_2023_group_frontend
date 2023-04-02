@@ -42,7 +42,7 @@ const postData = async () => {
 
 return(
     <form className='form' id="login-form">
-        <h1>Login Form Heading</h1>
+        <h1>Login Form</h1>
         <div className="login-form-section">
             <label htmlFor="username">Username:</label>
             <input type="text" id="username" placeholder="Enter username"

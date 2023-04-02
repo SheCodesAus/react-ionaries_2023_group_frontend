@@ -4,8 +4,9 @@ import { useNavigate } from 'react-router-dom';
 
 function SignUpPage() {
     const [ register, setRegister ] = useState({
-        firstName: "",
-        lastName: "",
+        username: "",
+        first_name: "",
+        last_name: "",
         email: "",
         password: "",
       });
@@ -22,10 +23,10 @@ function SignUpPage() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (register.firstName && register.lastName && register.email && register.password) {
+        if (register.username && register.first_name && register.last_name && register.email && register.password) {
             postData().then((response) => {
                 window.localStorage.setItem("token", response.token)
-                // navigate('/profiles/') This will be used once the 'create profile' page is ready.
+                navigate('/createprofile/')
             })
         }
     };
@@ -42,15 +43,20 @@ function SignUpPage() {
     };
 
     return (
-        <div className="form">
+        <form className="form">
+            <h1>Sign up to share your success story</h1>
             <div className="username">
+                <label htmlFor="userName">User Name:</label>
+                <input type="text" onChange={handleChange} id="username" placeholder="User Name"/>
+            </div>
+            <div className="firstName">
                 <label htmlFor="firstName">First Name:</label>
-                <input type="text" onChange={handleChange} id="firstName" placeholder="First Name"/>
+                <input type="text" onChange={handleChange} id="first_name" placeholder="First Name"/>
             </div>
 
             <div className="lastname">
                 <label htmlFor="lastName">Last Name:</label>
-                <input type="text" name="" id="lastName" onChange={handleChange} placeholder="Last Name"/>
+                <input type="text" name="" id="last_name" onChange={handleChange} placeholder="Last Name"/>
             </div>
 
             <div className="email">
@@ -63,8 +69,8 @@ function SignUpPage() {
                 <input type="password"  id="password" onChange={handleChange} placeholder="Password"/>
             </div>
             
-            <button onClick={handleSubmit} type="submit">Sign Up</button>
-        </div>
+            <button className="primary" onClick={handleSubmit} type="submit">Sign Up</button>
+        </form>
        
     )       
 
