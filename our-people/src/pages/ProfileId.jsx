@@ -21,7 +21,7 @@ function ProfilePage() {
     const [projectList, setProjectList] = useState([]);
 
     useEffect( () => {
-        fetch(`${import.meta.env.VITE_API_URL}projects`)
+        fetch(`${import.meta.env.VITE_API_URL}project`)
         .then ((results) => {
             return results.json();
         })
@@ -31,27 +31,45 @@ function ProfilePage() {
     }, []);
 
     return ( 
+
+     
         <div>
+    
+            <div className="div1">
+                <img src={profileData.profile_image} />
+            </div>
 
-            <div>
-                <img src={profileData.profile_image}></img>
+            <div className="div2">
                 <h2>{profileData.display_name}</h2>
-                <h3>{profileData.pronouns}</h3>
-                <h3>{profileData.current_role}</h3>
-                <h3>{profileData.previous_role}</h3>
-                <p>{profileData.bio}</p>
-                <p>{profileData.challenges}</p>
-                <a>{profileData.github_url}</a>
-                <a>{profileData.linkedin_url}</a>
-            </div>
+                <p><b>Pronoun:</b> {profileData.pronouns}</p>
+                <p><b>Current Role:</b> {profileData.current_role}</p>
+                <p><b>previous Role:</b> {profileData.previous_role}</p>
+                <p><b>Bio:</b> {profileData.bio}</p>
+                <p><b>Challenge:</b> {profileData.challenges}</p>
+                <p><b>Github_url:</b>  <a>{profileData.github_url}</a></p> 
+                <p><b>linkedin_url:</b>  <a>{profileData.linkedin_url}</a></p>
+                <p><b>Projects:</b></p> 
 
-            <div>
-            {projectList.map((projectData, key) => {
-                return <ProjectCard projectData={projectData}/>
-            })}
+                <div className = "container-projects">
+                    <div className = "container-projects-details">
+                        {projectList.map((projectData, key) => {
+                        return <ProjectCard projectData={projectData}/>
+                        })}
+                    </div>
+                </div>
+                           
             </div>
+        
 
         </div>
+           
+         
+
+            
+
+        
+            
+            
     )
 }
 

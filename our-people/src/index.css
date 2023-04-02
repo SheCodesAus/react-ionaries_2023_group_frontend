@@ -109,3 +109,79 @@ button:focus-visible {
     color: #747bff;
   }
 }
+
+
+.div1{
+  width: 50%;
+  float:right;
+  margin-top: 80px;
+ 
+ 
+ }
+ 
+ .div1 img{
+   width: 450px;
+   height: 350px;
+   border-radius: 30px;
+   margin-left: 60px;
+ 
+ }
+ 
+ .div2{
+   width: 40%;
+   float:left;
+   margin-top: 80px;
+   margin-left: 90px;
+   border-radius: 10px;
+ 
+  }
+
+  .div2 h2{
+    margin-bottom: 35px;
+  }
+
+  .div2 p{
+    padding-bottom: 15px;
+  }
+
+  .div2 a{
+    padding-bottom: 15px;
+  }
+
+
+
+.container-projects {
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 30px;
+    /* border: 1px solid black; */
+    
+}
+
+.container-projects-details{
+  padding: 20px;
+  width: 100%;
+  margin-top: 30px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction:column;
+  /* flex-wrap: wrap; */
+  gap: 20px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+ 
