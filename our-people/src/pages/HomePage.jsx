@@ -15,7 +15,7 @@ function HomePage() {
         .then((data) => {
             const recentProfiles = data
             .sort((a,b) => new Date(b.date_created) - new Date(a.date_created))
-            .slice(0,3);
+            .slice(0,4);
             setProfileList(recentProfiles);
         });
     }, []);
@@ -24,11 +24,13 @@ function HomePage() {
         return (
             <div>
                 <Hero />
-                <h1>Bringing Technology Together</h1>
-                    <div className = "profile-wrapper">
-                        <div className = "container">
-                            {profileList.map((profileData, key)=> {
-                                return <ProfileCard key={key} profileData={profileData} />;
+                <div className = "profile-wrapper">
+                    <div className = "profile-title">
+                        <h1>Bringing Technology Together</h1>
+                    </div>
+                    <div className = "profile-container">
+                        {profileList.map((profileData, key)=> {
+                            return <ProfileCard key={key} profileData={profileData} />;
                                 }
                             )}
                         </div>
