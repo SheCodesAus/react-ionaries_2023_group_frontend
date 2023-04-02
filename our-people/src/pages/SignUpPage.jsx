@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 function SignUpPage() {
     const [ register, setRegister ] = useState({
+        username: "",
         firstName: "",
         lastName: "",
         email: "",
@@ -22,7 +23,7 @@ function SignUpPage() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (register.firstName && register.lastName && register.email && register.password) {
+        if (register.first_name && register.last_name && register.email && register.password) {
             postData().then((response) => {
                 window.localStorage.setItem("token", response.token)
                 navigate('/createprofile/')
@@ -42,7 +43,7 @@ function SignUpPage() {
     };
 
     return (
-        <div className="form">
+        <form className="form">
             <h1>Sign up to share your success story</h1>
             <div className="username">
                 <label htmlFor="userName">User Name:</label>
@@ -69,7 +70,7 @@ function SignUpPage() {
             </div>
             
             <button className="primary" onClick={handleSubmit} type="submit">Sign Up</button>
-        </div>
+        </form>
        
     )       
 
