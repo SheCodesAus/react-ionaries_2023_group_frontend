@@ -4,7 +4,7 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 
 function ProfileEdit() {
     const token = localStorage.getItem('token')
-    const [ profileData , setProfileData] = useState({profiles: []})
+    const [ profileData , setProfileData] = useState({})
     const { id } = useParams();
     const navigate = useNavigate();
 
@@ -33,7 +33,7 @@ function ProfileEdit() {
 
 
     const handleChange = (event) => {
-        setProfile({ ...profile, [event.target.name]: event.target.value });
+        setProfileData({ ...profileData, [event.target.name]: event.target.value });
     };
 
 
@@ -67,47 +67,47 @@ return (
             <div>
                 <div>
                     <label htmlFor='displayName'>Display Name:</label>
-                    <input onChange={handleChange} type="text" id='displayName' value={profileData.display_name}></input>
+                    <input onChange={handleChange} type="text" id='displayName' name='display_name' value={profileData.display_name}></input>
                 </div>
 
                 <div>
                     <label htmlFor='profileImage'>Profile Image:</label>
-                    <input onChange={handleChange} type="url" id='profileImage' value={profileData.profile_image}></input>
+                    <input onChange={handleChange} type="url" id='profileImage' name='profile_image' value={profileData.profile_image}></input>
                 </div>
 
                 <div>
                     <label htmlFor='pronouns'>Pronouns:</label>
-                    <input onChange={handleChange} type="text" id='pronouns' value={profileData.pronouns}></input>
+                    <input onChange={handleChange} type="text" id='pronouns' name='pronouns' value={profileData.pronouns}></input>
                 </div>
 
                 <div>
                     <label htmlFor='currentRole'>Current Role:</label>
-                    <input onChange={handleChange} type="text" id='currentRole' value={profileData.current_role}></input>
+                    <input onChange={handleChange} type="text" id='currentRole' name='current_role' value={profileData.current_role}></input>
                 </div>
 
                 <div>
                     <label htmlFor='previousRole'>Previous Role:</label>
-                    <input onChange={handleChange} type="text" id='previousRole' value={profileData.previous_role}></input>
+                    <input onChange={handleChange} type="text" id='previousRole' name='previous_role' value={profileData.previous_role}></input>
                 </div>
 
                 <div>
                     <label htmlFor='bio'>Bio:</label>
-                    <input onChange={handleChange} type="text" id='bio' value={profileData.bio}></input>
+                    <input onChange={handleChange} type="text" id='bio' name='bio' value={profileData.bio}></input>
                 </div>
 
                 <div>
                     <label htmlFor='challenge'>Challenge:</label>
-                    <input onChange={handleChange} type="text" id='challenge' value={profileData.challenge}></input>
+                    <input onChange={handleChange} type="text" id='challenge' name='challenge' value={profileData.challenge}></input>
                 </div>
 
                 <div>
                     <label htmlFor='githubUrl'>Github Link:</label>
-                    <input onChange={handleChange} type="url" id='githubUrl' value={profileData.github_url}></input>
+                    <input onChange={handleChange} type="url" id='githubUrl' name='github_url' value={profileData.github_url}></input>
                 </div>
 
                 <div>
                     <label htmlFor='linkedinUrl'>LinkedIn Link:</label>
-                    <input onChange={handleChange} type="url" id='linkedinUrl' value={profileData.linkedin_url}></input>
+                    <input onChange={handleChange} type="url" id='linkedinUrl' name='linkedin_url' value={profileData.linkedin_url}></input>
                 </div>
 
             </div>

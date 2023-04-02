@@ -51,22 +51,22 @@ function ProjectEdit() {
 
             <div>
                 <label htmlFor='projectTitle'>Title:</label>
-                <input onChange={handleChange} type="text" id='projectTitle' value={projectData.title}></input>
+                <input onChange={handleChange} type="text" id='projectTitle' name='title' value={projectData.title}></input>
             </div>
 
             <div>
                 <label htmlFor='projectImage'>Project Image:</label>
-                <input onChange={handleChange} type="url" id='projectImage' value={projectData.image}></input>
+                <input onChange={handleChange} type="url" id='projectImage' name='image' value={projectData.image}></input>
             </div>
 
             <div>
                 <label htmlFor='projectDescription'>Description:</label>
-                <input onChange={handleChange} type="text" id='projectDescription' value={projectData.description}></input>
+                <input onChange={handleChange} type="text" id='projectDescription' name='description' value={projectData.description}></input>
             </div>
 
             <div>
                 <label htmlFor='projectLink'>Project Link:</label>
-                <input onChange={handleChange} type="url" id='projectLink' value={projectData.url}></input>
+                <input onChange={handleChange} type="url" id='projectLink' name='url' value={projectData.url}></input>
             </div>
 
             <div>
