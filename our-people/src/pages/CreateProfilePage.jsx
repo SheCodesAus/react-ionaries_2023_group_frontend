@@ -100,7 +100,7 @@ function CreateProfilePage() {
                 </div>
                 <div className="profile-form-section">
                     <label htmlFor="pronouns">Pronouns:</label>
-                    <select id="pronouns" onChange={handleChange}>
+                    <select id="pronouns" name="pronouns" onChange={handleChange}>
                         <option value="" disabled>Select one...</option>
                         <option value="She/Her">She/Her</option>
                         <option value="He/Him">He/Him</option>
@@ -115,10 +115,11 @@ function CreateProfilePage() {
                 </div>
                 <div className="profile-form-section">
                     <label htmlFor="gender">Gender:</label>
-                    <select id="gender" onChange={handleChange}>
+                    <select id="gender" name="gender" onChange={handleChange}>
                     <option value="" disabled>Select one...</option>
                         <option value="Female">Female</option>
                         <option value="Male">Male</option>
+                        <option value="Non-binary">Non-binary</option>
                     </select>
                 </div>
                 <div className="profile-form-section">
