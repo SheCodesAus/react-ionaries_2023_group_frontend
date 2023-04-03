@@ -46,11 +46,11 @@ function ProfilePage() {
                     <p><b>Challenge:</b> {profileData.challenges}</p>
                     <Link to={profileData.github_url}><p><b>Github Link</b></p></Link>
                     <Link to={profileData.linkedin_url}><p><b>LinkedIn Link</b></p></Link>
+                    <h3>Projects:</h3>
                 </div>
             </div>
             
             <div className = "project-container">
-                <h2>Projects:</h2>
                 {projectList.filter(project => project.profile_id == id).map((projectData, key) => {
                     return <ProjectCard projectData={projectData}/>
                 })}
