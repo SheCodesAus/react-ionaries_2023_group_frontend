@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import ProjectCard from '../components/ProjectCard'
-import { useNavigate } from 'react-router-dom';
-import { useParams } from "react-router-dom";
+import { Link, useParams } from 'react-router-dom';
 
 function ProfilePage() {
+    const isLogIn = window.localStorage.getItem("token") !== null;
     const [ profileData, setProfileData] = useState({profiles: []})
     const { id } = useParams();
 
@@ -21,7 +21,7 @@ function ProfilePage() {
     const [projectList, setProjectList] = useState([]);
 
     useEffect( () => {
-        fetch(`${import.meta.env.VITE_API_URL}projects`)
+        fetch(`${import.meta.env.VITE_API_URL}project`)
         .then ((results) => {
             return results.json();
         })
@@ -29,7 +29,7 @@ function ProfilePage() {
             setProjectList(data)
         });
     }, []);
-
+    
     return ( 
         <div>
 
@@ -40,16 +40,25 @@ function ProfilePage() {
                 <h3>{profileData.current_role}</h3>
                 <h3>{profileData.previous_role}</h3>
                 <p>{profileData.bio}</p>
-                <p>{profileData.challenges}</p>
-                <a>{profileData.github_url}</a>
-                <a>{profileData.linkedin_url}</a>
+                <p>{profileData.challenge}</p>
+                <Link to={profileData.github_url}>Github Link</Link>
+                <Link to={profileData.linkedin_url}>LinkedIn Link</Link>
             </div>
-
+            
             <div>
-            {projectList.map((projectData, key) => {
-                return <ProjectCard projectData={projectData}/>
-            })}
+                {projectList.filter(project => project.profile_id == id).map((projectData, key) => {
+                    return <ProjectCard projectData={projectData}/>
+                })}
             </div>
+                
+            { isLogIn &&
+            <div>
+                <Link to={`/profile/${profileData.id}/edit`}>
+                    <button class="primary" type="button">Edit</button>
+                </Link>
+            </div>
+            }
+            
 
         </div>
     )

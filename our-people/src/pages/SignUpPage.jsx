@@ -25,8 +25,7 @@ function SignUpPage() {
         event.preventDefault();
         if (register.username && register.first_name && register.last_name && register.email && register.password) {
             postData().then((response) => {
-                window.localStorage.setItem("token", response.token)
-                navigate('/createprofile/')
+                navigate('/login/')
             })
         }
     };
@@ -46,9 +45,10 @@ function SignUpPage() {
         <form className="form">
             <h1>Sign up to share your success story</h1>
             <div className="username">
-                <label htmlFor="userName">User Name:</label>
-                <input type="text" onChange={handleChange} id="username" placeholder="User Name"/>
+                <label htmlFor="username">Username:</label>
+                <input type="text" onChange={handleChange} id="username" placeholder="Username"/>
             </div>
+
             <div className="firstName">
                 <label htmlFor="firstName">First Name:</label>
                 <input type="text" onChange={handleChange} id="first_name" placeholder="First Name"/>
