@@ -140,7 +140,8 @@ function CreateProfilePage() {
                     onChange={handleChange}></input>
                 </div>
 
-                <div> 
+                <div>
+                <h3>Project</h3>
                     {projects.map((item, i) => ( <NewProject text={item} /> ))}
                     <button className="primary" type="button" onClick={addProject}>Add Project</button> 
                 </div> 
