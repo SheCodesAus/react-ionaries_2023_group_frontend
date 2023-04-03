@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import {Link} from 'react-router-dom';
+
 
 function LoginForm() {
     const [credentials, setCredentials] = useState({
@@ -16,6 +18,8 @@ const handleChange = (event) => {
 };
 
 const navigate = useNavigate();
+
+const [formError, setFormError] = useState(false)
 
 const handleSubmit = (event) => {
     event.preventDefault();
@@ -37,12 +41,19 @@ const postData = async () => {
         },
         body: JSON.stringify(credentials)
     })
-    return response.json();
+    if (response.ok) {
+        setFormError(false);
+        return response.json()
+    } else {
+        setFormError(true);
+        return
+    }
+
 }
 
 return(
     <form className='form' id="login-form">
-        <h1>Login Form Heading</h1>
+        <h1>Login Form</h1>
         <div className="login-form-section">
             <label htmlFor="username">Username:</label>
             <input type="text" id="username" placeholder="Enter username"
@@ -55,6 +66,14 @@ return(
         </div>
 
         <button className="primary" type="submit" onClick={handleSubmit}>Login</button>
+
+        {
+            formError && 
+            <div>
+                <p>The username and password you entered does not match our records. Please try again.</p>
+                <p>If you don't have an account, please sign up for one <Link to={`/signup`}>here</Link>.</p>
+            </div>
+        }
 
     </form>
     )
