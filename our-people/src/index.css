@@ -197,8 +197,9 @@ button:focus-visible {
  .div2{
    width: 40%;
    float:left;
-   margin-top: 80px;
+   margin-top: 30px;
    margin-left: 90px;
+   margin-bottom: 50px;
    border-radius: 10px;
   }
 
@@ -214,11 +215,17 @@ button:focus-visible {
     padding-bottom: 15px;
   }
 
+
   .project-container {
     width: 100%;
     display: flex;
     align-content: row;
+    margin-left: 90px;
+    padding-top: 60px;
+   
   }
+
+  
  
 
 

@@ -47,25 +47,19 @@ function ProfilePage() {
                     <p><b>Bio:</b> {profileData.bio}</p>
                     <p><b>Challenge:</b> {profileData.challenges}</p>
                     <p><b>Github_url:</b>  <a>{profileData.github_url}</a></p> 
-                    <p><b>linkedin_url:</b>  <a>{profileData.linkedin_url}</a></p>
-                    <p><b>Projects:</b></p> 
+                    <p><b>linkedin_url:</b>  <a>{profileData.linkedin_url}</a></p> 
                 </div>
             </div>
-                
-             <div className = "project-container">
-                {projectList.map((projectData, key) => {
-                return <ProjectCard projectData={projectData}/>
-                 })}
-            </div>
-                              
+
+                 
+                <div className = "project-container"> 
+                <h2>Projects:</h2>          
+                    {projectList.map((projectData, key) => {
+                    return <ProjectCard projectData={projectData}/>
+                     })}
+                </div>                             
         </div>
-           
-         
-
-            
-
-        
-            
+                            
             
     )
 }
