@@ -18,7 +18,7 @@ function Nav() {
         <header>
             <Link to="/"><img src={logo} alt="logo" /></Link>
             <nav>
-                {isLogIn && <Link className='user-icon' to="/profileid">{username.slice(0,1)}</Link>}
+                {isLogIn && <Link className='user-icon' to="/profile/:id">{username.slice(0,1)}</Link>}
                 {isLogIn && <Link to="/createprofile">Create Profile</Link>}
                 {isLogIn && <Link to="/allstories">All Stories</Link>}
                 {isLogIn && <Link className='secondary-btn' to="/" onClick={onLogOut}>Log out</Link>}

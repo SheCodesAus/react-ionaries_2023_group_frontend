@@ -2,13 +2,15 @@ import React from "react";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { useState } from 'react'
 import LoginPage from './pages/LoginPage';
-import ProfilePage from "./pages/ProfileId";
+import ProfilePage from "./pages/ProfilePage";
 import SignUpPage from './pages/SignUpPage';
-import MyProfilePage from './pages/MyProfilePage';
+import CreateProfilePage from './pages/CreateProfilePage';
 import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer/Footer";
 import AllStoriesPage from "./pages/AllStories";
 import Nav from "./components/NavBar";
+import ProfileEdit from "./pages/ProfileEdit";
+import ProjectEdit from "./pages/ProjectEdit";
 
 
 const HeaderLayout = () => {
@@ -40,6 +42,14 @@ const router = createBrowserRouter([
         element: <ProfilePage />
       },
       {
+        path: '/profile/:id/edit',
+        element: <ProfileEdit />
+      },
+      {
+        path: '/project/:id/edit',
+        element: <ProjectEdit />
+      },
+      {
         path: '/',
         element: <HomePage />
       },
@@ -48,8 +58,8 @@ const router = createBrowserRouter([
         element: <AllStoriesPage />
       },
       {
-        path: '/createprofile',
-        element: <MyProfilePage />
+        path: '/create-profile',
+        element: <CreateProfilePage />
       },
     ]
   }

@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import ProjectCard from '../components/ProjectCard';
-import { useNavigate } from 'react-router-dom';
-import { useParams } from "react-router-dom";
+import React, { useState, useEffect } from 'react'
+import ProjectCard from '../components/ProjectCard'
+import { Link, useParams } from 'react-router-dom';
 
 function ProfilePage() {
+    const isLogIn = window.localStorage.getItem("token") !== null;
     const [ profileData, setProfileData] = useState({profiles: []})
     const { id } = useParams();
 
@@ -29,38 +29,43 @@ function ProfilePage() {
             setProjectList(data)
         });
     }, []);
-
+    
     return ( 
-
         <div>
             <div>
-    
                 <div className="div1">
-                    <img src={profileData.profile_image} />
+                    <img src={profileData.profile_image}></img>
                 </div>
 
                 <div className="div2">
                     <h2>{profileData.display_name}</h2>
-                    <p><b>Pronoun:</b> {profileData.pronouns}</p>
+                    <p><b>Pronouns:</b> {profileData.pronouns}</p>
                     <p><b>Current Role:</b> {profileData.current_role}</p>
-                    <p><b>previous Role:</b> {profileData.previous_role}</p>
+                    <p><b>Previous Role:</b> {profileData.previous_role}</p>
                     <p><b>Bio:</b> {profileData.bio}</p>
                     <p><b>Challenge:</b> {profileData.challenges}</p>
-                    <p><b>Github_url:</b>  <a>{profileData.github_url}</a></p> 
-                    <p><b>linkedin_url:</b>  <a>{profileData.linkedin_url}</a></p> 
+                    <Link to={profileData.github_url}><p><b>Github Link</b></p></Link>
+                    <Link to={profileData.linkedin_url}><p><b>LinkedIn Link</b></p></Link>
                 </div>
             </div>
-
-                 
-                <div className = "project-container"> 
-                <h2>Projects:</h2>          
-                    {projectList.map((projectData, key) => {
-                    return <ProjectCard projectData={projectData}/>
-                     })}
-                </div>                             
-        </div>
-                            
             
+            <div className = "project-container">
+                <h2>Projects:</h2>
+                {projectList.filter(project => project.profile_id == id).map((projectData, key) => {
+                    return <ProjectCard projectData={projectData}/>
+                })}
+            </div>
+                
+            { isLogIn &&
+            <div>
+                <Link to={`/profile/${profileData.id}/edit`}>
+                    <button class="primary" type="button">Edit</button>
+                </Link>
+            </div>
+            }
+            
+
+        </div>
     )
 }
 

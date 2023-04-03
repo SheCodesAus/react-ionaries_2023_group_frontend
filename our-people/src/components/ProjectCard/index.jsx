@@ -2,40 +2,27 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './ProjectCard.css'
 
-// function ProjectCard(props) {
-//     const { projectData } = props;
-//     return (
-//         <div>
-//             <Link to={`/project/${projectData.id}`}>
-//                 <img src={projectData.image}></img>
-//                 <h3>{projectData.title}</h3>
-//                 <p>{projectData.description}</p>
-//                 <a>{projectData.url}</a>
-//             </Link>
-//         </div>
-//     )
-// }
-
-// export default ProjectCard;
-
 function ProjectCard(props) {
-    const {projectData} = props;
-return (
-    <div className="project-card">
-        <Link to={`/project/${projectData.id}`}>
-            <div className="gradient-project-card">
-                    <div className="detail-projectcard-container">
-                        <h3>{projectData.title}</h3>
-                        <h4>{projectData.description}</h4>
-                        <h4>{projectData.url}</h4>
-                    </div>
-                    <div className="display-projectimage-container">
+    const { projectData } = props;
+    const isLogIn = window.localStorage.getItem("token") !== null;
+    
+    return (
+        <div className="project-card">
+            
+            <div className="detail-projectcard-container">
+                <div className="detail-projectcard-container">
+                    {!isLogIn && <h3>{projectData.title}</h3>}
+                    {isLogIn && <Link to={`/project/${projectData.id}/edit`}><h3>{projectData.title}</h3></Link>}
+                    <h4>{projectData.description}</h4>
+                    <Link to={projectData.url}><h4>Project Link</h4></Link>
+                </div>
+
+            <div className="display-projectimage-container">
                         <img id="display-projectimage" src={projectData.image}></img>
-                    </div>
-        
-            </div>    
-        </Link>    
-    </div>
-)
+            </div>
+
+            </div>
+        </div>
+    )
 }
 export default ProjectCard;
