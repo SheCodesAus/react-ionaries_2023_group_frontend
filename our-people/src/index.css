@@ -104,6 +104,9 @@ body {
   /* place-items: center; */
   /* min-width: 320px; */
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .container-for-profiles-cards{
   max-width: 1440px;
@@ -113,16 +116,22 @@ h1 {
   line-height: 1.1;
 }
 
+@media (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+
 /* home-page css */
 
 .profile-wrapper {
-  height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-left: 30px;
   padding-right: 30px;
   max-width: 1440px;
+  align-self: center;
 }
 
 .profile-title {
@@ -135,7 +144,9 @@ h1 {
 .profile-container {
   width: 100%;
   display: flex;
-  align-content: row;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 
@@ -192,6 +203,10 @@ button:focus-visible {
   }
 }
 
+.hero-banner {
+  display: flex;
+
+}
 
 /* Profile-ID-Page css */
 
