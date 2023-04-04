@@ -61,7 +61,7 @@ const postData = async () => {
 
 return(
     <form className='form' id="profile-form">
-        <h1>Profile Form Heading</h1>
+        <h1>Profile Form</h1>
         <div className="profile-form-section">
             <label htmlFor="profile_image">Profile_image:</label>
             <input type="url" id="profile_image" placeholder="Place a profile image url"
