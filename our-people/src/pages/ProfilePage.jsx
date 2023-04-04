@@ -32,20 +32,25 @@ function ProfilePage() {
     
     return ( 
         <div>
-
             <div>
-                <img src={profileData.profile_image}></img>
-                <h2>{profileData.display_name}</h2>
-                <h3>{profileData.pronouns}</h3>
-                <h3>{profileData.current_role}</h3>
-                <h3>{profileData.previous_role}</h3>
-                <p>{profileData.bio}</p>
-                <p>{profileData.challenge}</p>
-                <Link to={profileData.github_url}>Github Link</Link>
-                <Link to={profileData.linkedin_url}>LinkedIn Link</Link>
+                <div className="div1">
+                    <img src={profileData.profile_image}></img>
+                </div>
+
+                <div className="div2">
+                    <h2>{profileData.display_name}</h2>
+                    <p><b>Pronouns:</b> {profileData.pronouns}</p>
+                    <p><b>Current Role:</b> {profileData.current_role}</p>
+                    <p><b>Previous Role:</b> {profileData.previous_role}</p>
+                    <p><b>Bio:</b> {profileData.bio}</p>
+                    <p><b>Challenge:</b> {profileData.challenges}</p>
+                    <Link to={profileData.github_url}><p><b>Github Link</b></p></Link>
+                    <Link to={profileData.linkedin_url}><p><b>LinkedIn Link</b></p></Link>
+                    <h3>Projects:</h3>
+                </div>
             </div>
             
-            <div>
+            <div className = "project-container">
                 {projectList.filter(project => project.profile_id == id).map((projectData, key) => {
                     return <ProjectCard projectData={projectData}/>
                 })}
