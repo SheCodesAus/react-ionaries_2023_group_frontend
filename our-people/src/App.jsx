@@ -58,7 +58,7 @@ const router = createBrowserRouter([
         element: <AllStoriesPage />
       },
       {
-        path: '/createprofile',
+        path: '/create-profile',
         element: <CreateProfilePage />
       },
     ]
