@@ -28,8 +28,9 @@ const handleSubmit = (event) => {
         postData().then((response) => {
             window.localStorage.setItem("token", response.token);
             window.localStorage.setItem("username", credentials.username);
-            navigate('/');
-    });
+            navigate('/')
+            window.location.reload()
+        })
     }
 };
 
