@@ -23,18 +23,20 @@ function HomePage() {
 
         return (
             <div>
-                <Hero />
-                <div className = "profile-wrapper">
-                    <div className = "profile-title">
-                        <h1>Bringing Technology Together</h1>
-                    </div>
-                    <div className = "profile-container">
-                        {profileList.map((profileData, key)=> {
-                            return <ProfileCard key={key} profileData={profileData} />;
-                                }
-                            )}
-                        </div>
-                    </div>
+                <body>
+                    <Hero />
+                        <div className = "profile-wrapper">
+                            <div className = "profile-title">
+                                <h1>Bringing Technology Together</h1>
+                            </div>
+                            <div className = "profile-container">
+                                {profileList.map((profileData, key)=> {
+                                    return <ProfileCard key={key} profileData={profileData} />;
+                                        }
+                                    )}
+                                </div>
+                            </div>
+                    </body>
             </div>
 
     ) 

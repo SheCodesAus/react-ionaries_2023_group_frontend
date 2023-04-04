@@ -2,9 +2,9 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     height: 400px;
-    width: 320px;
+    width: 310px;
     margin: 40px 20px 40px 10px;
-    z-index: inherit;
+    z-index: initial;
     transition: all 0.25s ease 0s;
 }
 
