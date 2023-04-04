@@ -47,7 +47,7 @@ nav{
     width: 50px;
     text-align: center;
     padding-top: 13px;
-    text-transform: capitalize;
+    text-transform: uppercase;
     border: 1px solid #000;
     margin-right: 20px;
 }
