@@ -69,9 +69,9 @@ function CreateProfilePage() {
     return(
         <div>
             <form className='form' id="profile-form">
-                <h1>Profile Form Heading</h1>
+                <h1>Profile Form</h1>
                 <div className="profile-form-section">
-                    <label htmlFor="profile_image">Profile_image:</label>
+                    <label htmlFor="profile_image">Profile Image:</label>
                     <input type="url" id="profile_image" placeholder="Place a profile image url"
                     onChange={handleChange}></input>
                 </div>
@@ -82,8 +82,13 @@ function CreateProfilePage() {
                 </div>
                 <div className="profile-form-section">
                     <label htmlFor="bio">Bio:</label>
-                    <input type="text" id="bio" placeholder="Tell us about yourself!"
-                    onChange={handleChange}></input>
+                    <textarea id="bio" placeholder="Tell us about yourself!"
+                    onChange={handleChange}></textarea>
+                </div>
+                <div className="profile-form-section">
+                    <label htmlFor="challenge">Challenge:</label>
+                    <textarea id="challenge" placeholder="Challenge"
+                    onChange={handleChange}></textarea>
                 </div>
                 <div className="profile-form-section">
                     <label htmlFor="previous_role">Previous Role:</label>
@@ -95,12 +100,7 @@ function CreateProfilePage() {
                     <input type="text" id="current_role" placeholder="What is your current role?"
                     onChange={handleChange}></input>
                 </div>
-                <div className="profile-form-section">
-                    <label htmlFor="challenge">Challenge:</label>
-                    <input type="text" id="challenge" placeholder="Challenge"
-                    onChange={handleChange}></input>
-                </div>
-                <div className="profile-form-section">
+                <div>
                     <label htmlFor="birthdate">Birthdate:</label>
                     <input type="date" id="birthdate" placeholder="Please include your birthdate YYYY/MM/DD"
                     onChange={handleChange}></input>
@@ -117,17 +117,17 @@ function CreateProfilePage() {
                     </select>
                 </div>
                 <div className="profile-form-section">
-                    <label htmlFor="ethnicity">Ethnicity:</label>
-                    <input type="text" id="ethnicity" placeholder="What is your ethnicity?"
-                    onChange={handleChange}></input>
-                </div>
-                <div className="profile-form-section">
                     <label htmlFor="gender">Gender:</label>
                     <select id="gender" onChange={handleChange}>
                     <option value="">Select one...</option>
                         <option value="Female">Female</option>
                         <option value="Male">Male</option>
                     </select>
+                </div>
+                <div className="profile-form-section">
+                    <label htmlFor="ethnicity">Ethnicity:</label>
+                    <input type="text" id="ethnicity" placeholder="What is your ethnicity?"
+                    onChange={handleChange}></input>
                 </div>
                 <div className="profile-form-section">
                     <label htmlFor="linkedin_url">LinkedIn Url:</label>
