@@ -46,27 +46,27 @@ function SignUpPage() {
             <h1>Sign up to share your success story</h1>
             <div className="username">
                 <label htmlFor="username">Username:</label>
-                <input type="text" onChange={handleChange} id="username" placeholder="Username"/>
+                <input type="text" onChange={handleChange} name="username" id="username" placeholder="Username"/>
             </div>
 
             <div className="firstName">
                 <label htmlFor="firstName">First Name:</label>
-                <input type="text" onChange={handleChange} id="first_name" placeholder="First Name"/>
+                <input type="text" onChange={handleChange} name="first_name" id="firstName" placeholder="First Name"/>
             </div>
 
             <div className="lastname">
                 <label htmlFor="lastName">Last Name:</label>
-                <input type="text" name="" id="last_name" onChange={handleChange} placeholder="Last Name"/>
+                <input type="text" name="last_name" id="lastName" onChange={handleChange} placeholder="Last Name"/>
             </div>
 
             <div className="email">
                 <label htmlFor="email">Email:</label>
-                <input  type="email" id="email" onChange={handleChange} placeholder="Email"/>
+                <input  type="email" name="email" id="email" onChange={handleChange} placeholder="Email"/>
             </div>
 
             <div className="password">
                 <label htmlFor="password">Password:</label>
-                <input type="password"  id="password" onChange={handleChange} placeholder="Password"/>
+                <input type="password"  name="password" id="password" onChange={handleChange} placeholder="Password"/>
             </div>
             
             <button className="primary" onClick={handleSubmit} type="submit">Sign Up</button>

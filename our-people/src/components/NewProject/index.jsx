@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function NewProject() {
     const token = localStorage.getItem('token')
     const [project, setProject] = useState({
-        title: true,
+        title: "",
         image: "",
         description: "",
         url: "",
@@ -38,7 +38,6 @@ function NewProject() {
     
     return (
         <div>
-            <h3>Project</h3>
 
             <div>
                 <label htmlFor='projectTitle'>Project Title:</label>

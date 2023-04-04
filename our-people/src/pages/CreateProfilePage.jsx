@@ -71,43 +71,36 @@ function CreateProfilePage() {
             <form className='form' id="profile-form">
                 <h1>Profile Form Heading</h1>
                 <div className="profile-form-section">
-                    <label htmlFor="profile_image">Profile_image:</label>
-                    <input type="url" id="profile_image" placeholder="Place a profile image url"
-                    onChange={handleChange}></input>
+                    <label htmlFor="profile_image">Profile Image:</label>
+                    <input type="url" id="profile_image" name="profile_image" placeholder="Place a profile image url" onChange={handleChange} />
                 </div>
                 <div className="profile-form-section">
                     <label htmlFor="display_name">Display Name:</label>
-                    <input type="text" id="display_name" placeholder="Enter Display Name"
-                    onChange={handleChange}></input>
+                    <input type="text" id="display_name" name="display_name" placeholder="Enter Display Name" onChange={handleChange} />
                 </div>
                 <div className="profile-form-section">
                     <label htmlFor="bio">Bio:</label>
-                    <input type="text" id="bio" placeholder="Tell us about yourself!"
-                    onChange={handleChange}></input>
+                    <input type="text" id="bio" name="bio" placeholder="Tell us about yourself!" onChange={handleChange}/>
                 </div>
                 <div className="profile-form-section">
                     <label htmlFor="previous_role">Previous Role:</label>
-                    <input type="text" id="previous_role" placeholder="What role have you transitioned from?"
-                    onChange={handleChange}></input>
+                    <input type="text" id="previous_role" name="previous_role" placeholder="What role have you transitioned from?" onChange={handleChange}/>
                 </div>
                 <div className="profile-form-section">
                     <label htmlFor="current_role">Current Role:</label>
-                    <input type="text" id="current_role" placeholder="What is your current role?"
-                    onChange={handleChange}></input>
+                    <input type="text" id="current_role" name="current_role" placeholder="What is your current role?" onChange={handleChange}/>
                 </div>
                 <div className="profile-form-section">
                     <label htmlFor="challenge">Challenge:</label>
-                    <input type="text" id="challenge" placeholder="Challenge"
-                    onChange={handleChange}></input>
+                    <input type="text" id="challenge" name="challenge" placeholder="Challenge" onChange={handleChange}/>
                 </div>
                 <div className="profile-form-section">
-                    <label htmlFor="birthdate">Birthdate:</label>
-                    <input type="date" id="birthdate" placeholder="Please include your birthdate YYYY/MM/DD"
-                    onChange={handleChange}></input>
+                    <label htmlFor="birthdate">Birth Date:</label>
+                    <input type="date" id="birthdate" name="birthdate" placeholder="Please include your birthdate YYYY/MM/DD" onChange={handleChange}/>
                 </div>
                 <div className="profile-form-section">
                     <label htmlFor="pronouns">Pronouns:</label>
-                    <select id="pronouns" onChange={handleChange}>
+                    <select id="pronouns" name="pronouns" onChange={handleChange}>
                         <option value="" disabled>Select one...</option>
                         <option value="She/Her">She/Her</option>
                         <option value="He/Him">He/Him</option>
@@ -118,29 +111,28 @@ function CreateProfilePage() {
                 </div>
                 <div className="profile-form-section">
                     <label htmlFor="ethnicity">Ethnicity:</label>
-                    <input type="text" id="ethnicity" placeholder="What is your ethnicity?"
-                    onChange={handleChange}></input>
+                    <input type="text" id="ethnicity" name="ethnicity" placeholder="What is your ethnicity?" onChange={handleChange}/>
                 </div>
                 <div className="profile-form-section">
                     <label htmlFor="gender">Gender:</label>
-                    <select id="gender" onChange={handleChange}>
+                    <select id="gender" name="gender" onChange={handleChange}>
                     <option value="" disabled>Select one...</option>
                         <option value="Female">Female</option>
                         <option value="Male">Male</option>
+                        <option value="Non-binary">Non-binary</option>
                     </select>
                 </div>
                 <div className="profile-form-section">
-                    <label htmlFor="linkedin_url">LinkedIn Url:</label>
-                    <input type="url" id="linkedin_url" placeholder="LinkedIn Url"
-                    onChange={handleChange}></input>
+                    <label htmlFor="linkedin_url">LinkedIn Profile:</label>
+                    <input type="url" id="linkedin_url" name="linkedin_url" placeholder="LinkedIn Url" onChange={handleChange}/>
                 </div>
                 <div className="profile-form-section">
-                    <label htmlFor="github_url">GitHub Url:</label>
-                    <input type="url" id="github_url" placeholder="Github Url"
-                    onChange={handleChange}></input>
+                    <label htmlFor="github_url">GitHub Link:</label>
+                    <input type="url" id="github_url" name="github_url" placeholder="Github Url" onChange={handleChange}/>
                 </div>
 
-                <div> 
+                <div>
+                <h3>Project</h3>
                     {projects.map((item, i) => ( <NewProject text={item} /> ))}
                     <button className="primary" type="button" onClick={addProject}>Add Project</button> 
                 </div> 
