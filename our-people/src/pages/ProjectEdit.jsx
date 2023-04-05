@@ -44,7 +44,7 @@ function ProjectEdit() {
     
 
     return (
-        <div>
+        <form className='form' id="profile-form">
             <img src={projectData.image}></img>
             <h3>{projectData.title}</h3>
             <p>{projectData.description}</p>
@@ -70,13 +70,12 @@ function ProjectEdit() {
             </div>
 
             <div>
-            <button class="primary" type="submit" onClick={handleSubmit}>Save</button>
+            <button class="save" type="submit" onClick={handleSubmit}>Save</button>
             <Link to={`/profile/${projectData.profile_id}`}>
                 <button class="secondary" type="button">Cancel</button>
             </Link>
             </div>
-
-        </div>
+        </form>
     )
 
 };
