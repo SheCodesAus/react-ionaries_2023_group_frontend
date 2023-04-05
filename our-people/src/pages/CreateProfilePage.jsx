@@ -142,8 +142,8 @@ function CreateProfilePage() {
 
                 <div> 
                     {projects.map((item, i) => ( <NewProject text={item} /> ))}
-                    <button className="primary" type="button" onClick={addProject}>Add Project</button> 
                 </div> 
+                <button className="primary" type="button" onClick={addProject}>Add Project</button> 
 
                 <button className="primary" type="submit" onClick={handleSubmit}>Submit</button>
 

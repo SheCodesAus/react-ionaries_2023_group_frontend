@@ -51,6 +51,8 @@
     padding: 100px;
   }
 
+  
+
   #bio {
     width: 400px;
     height: 200px;
@@ -72,6 +74,10 @@
     height: 48px;
     padding-left: 20px;
   }
+
+.body-padding {
+  padding-bottom: 30px;
+}
 
   .allstories {
     display: flex;
@@ -154,13 +160,13 @@ h1 {
 /* end of home page css */
 
 button.primary{
-  width: 140px;
   height: 48px;
   letter-spacing:0.2px;
   border-radius: 40px;
   border-color: #9F8CFA;
   border: 2px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.6em 2.2em;
+  margin: 0.1em 0.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
@@ -169,13 +175,13 @@ button.primary{
   transition: border-color 0.25s;
 }
 
+
 button.secondary{
-  width: 140px;
   height: 48px;
   letter-spacing:0.2px;
   border-radius: 40px;
   border: 2px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.6em 2.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
