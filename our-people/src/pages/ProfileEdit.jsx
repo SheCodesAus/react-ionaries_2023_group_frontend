@@ -62,9 +62,8 @@ function ProfileEdit() {
 
 return (
     <form>
-
         <div>
-            <div>
+            <div className="form">
                 <div>
                     <label htmlFor='displayName'>Display Name:</label>
                     <input onChange={handleChange} type="text" id='displayName' name='display_name' value={profileData.display_name}></input>

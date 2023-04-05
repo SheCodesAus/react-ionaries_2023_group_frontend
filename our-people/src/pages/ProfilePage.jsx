@@ -31,7 +31,7 @@ function ProfilePage() {
     }, []);
     
     return ( 
-        <div>
+        <div className="body-padding">
             <div>
                 <div className="div1">
                     <img src={profileData.profile_image}></img>
@@ -59,7 +59,7 @@ function ProfilePage() {
             { isLogIn &&
             <div>
                 <Link to={`/profile/${profileData.id}/edit`}>
-                    <button class="primary" type="button">Edit</button>
+                    <button className="primary" type="button">Edit</button>
                 </Link>
             </div>
             }

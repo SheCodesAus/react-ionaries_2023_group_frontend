@@ -39,8 +39,7 @@ function NewProject() {
     return (
         <div>
             <h3>Project</h3>
-
-            <div>
+            <div> 
                 <label htmlFor='projectTitle'>Project Title:</label>
                 <input onChange={handleChange} type="text" id='projectTitle' name='title'></input>
             </div>
@@ -61,8 +60,7 @@ function NewProject() {
             </div>
 
             <button class="primary" type="submit" onClick={handleSubmit}>Save Project</button>
-
-        </div>
+    </div>
     )
 }
 

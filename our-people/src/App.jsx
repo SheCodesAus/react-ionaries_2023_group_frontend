@@ -11,6 +11,7 @@ import AllStoriesPage from "./pages/AllStories";
 import Nav from "./components/NavBar";
 import ProfileEdit from "./pages/ProfileEdit";
 import ProjectEdit from "./pages/ProjectEdit";
+import Page404 from "./pages/Page404";
 
 
 const HeaderLayout = () => {
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
         path: '/create-profile',
         element: <CreateProfilePage />
       },
+      {
+        path: '/*',
+        element: <Page404 />
+      }
     ]
   }
 ]);
