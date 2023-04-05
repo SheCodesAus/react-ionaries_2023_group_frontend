@@ -9,8 +9,8 @@ function ApprovalRow(props) {
             <div>
                     <div id="user-details">
                         <p>{userData.first_name} {userData.last_name}</p>
-                        <p>{userData.last_name}</p>
                         <p>{userData.email}</p>
+                        <p>{userData.is_approved}</p>
                         <button>Approve</button>
                     </div>
             </div>

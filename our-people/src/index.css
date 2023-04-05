@@ -100,3 +100,18 @@ button:focus-visible {
     color: #747bff;
   }
 }
+
+#column-headers {
+  display: flex;
+  border: 1px solid black;
+}
+
+#user-details {
+  display: flex;
+  border: 1px solid black;
+}
+
+#user-details p {
+  padding: 20px;
+  border: 1px solid black;
+}
