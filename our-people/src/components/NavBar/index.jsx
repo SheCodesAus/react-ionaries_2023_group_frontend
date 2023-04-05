@@ -18,21 +18,20 @@ function Nav() {
             .then((data) => {
                 const userProfile = data.find((profile)=>profile.username===username)
                 setProfileData(userProfile);
-                console.log(`in useEffect${userProfile}`);
             });
-    },[ ]);
+    }, [username]);
+
 
     const onLogOut = () => {
         localStorage.clear();
         navigate('/');
     }
-    console.log(profileData);
+
     return (
         <header>
             <Link to="/"><img src={logo} alt="logo" /></Link>
             <nav>
-                {isLogIn && <Link className='user-icon' to={`/profile/${profileData.id}`}>{username.slice(0, 1)}</Link>}
-                {/* {isLogIn && <Link className='user-icon' to={`/profile/${profileData.id?profileData.id:''}`}>o</Link>} */}
+                {isLogIn && profileData && <Link className='user-icon' to={`/profile/${profileData.id}`}>{username.slice(0, 1)}</Link>}
                 {isLogIn && <Link to="/create-profile">Create Profile</Link>}
                 {isLogIn && <Link to="/allstories">All Stories</Link>}
                 {isLogIn && <Link className='secondary-btn' to="/" onClick={onLogOut}>Log out</Link>}

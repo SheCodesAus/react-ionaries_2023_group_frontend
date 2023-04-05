@@ -29,7 +29,6 @@ const handleSubmit = (event) => {
             window.localStorage.setItem("token", response.token);
             window.localStorage.setItem("username", credentials.username);
             navigate('/')
-            window.location.reload()
         })
     }
 };
