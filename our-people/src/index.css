@@ -51,6 +51,8 @@
     padding: 100px;
   }
 
+  
+
   #bio {
     width: 400px;
     height: 200px;
@@ -72,6 +74,10 @@
     height: 48px;
     padding-left: 20px;
   }
+
+.body-padding {
+  padding-bottom: 30px;
+}
 
   .allstories {
     display: flex;
@@ -168,6 +174,7 @@ button.primary{
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 
 button.secondary{
   height: 48px;
