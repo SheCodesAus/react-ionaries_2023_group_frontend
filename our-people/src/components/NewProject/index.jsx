@@ -37,7 +37,7 @@ function NewProject() {
 }   
     
     return (
-        <div>
+        <form className='form' id="profile-form">
             <h3>Project</h3>
             <div> 
                 <label htmlFor='projectTitle'>Project Title:</label>
@@ -60,7 +60,7 @@ function NewProject() {
             </div>
 
             <button class="primary" type="submit" onClick={handleSubmit}>Save Project</button>
-    </div>
+    </form>
     )
 }
 
