@@ -1,13 +1,6 @@
 footer {
-    /* position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0; */
-    /* max-width: 1440px; */
     padding: 16px 85px;
-    /* overflow: hidden; */
     border-top: 1px solid #000;
-
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -93,4 +86,28 @@ footer {
 
 .column li a:hover {
     color: #9F8CFA;
+}
+
+@media (max-width: 599px) {
+    footer{
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+    .container {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .left-col {
+            width: 100%;
+    }
+    .column li {
+        display: none;
+    }
+    .right-col{
+        justify-content: space-between;
+        padding-top: 10px;
+    }
+    .column h4 {
+        font-size: 12px;
+    }
 }
