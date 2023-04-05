@@ -59,7 +59,7 @@ function ProfilePage() {
             { isLogIn &&
             <div>
                 <Link to={`/profile/${profileData.id}/edit`}>
-                    <button className="primary" type="button">Edit</button>
+                    <button className="edit" type="button">Edit</button>
                 </Link>
             </div>
             }
